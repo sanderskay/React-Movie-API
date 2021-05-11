@@ -25,7 +25,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
   const fetchData = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=a33dac8f4fdc5b588a242bf40de1b265&language=en-US`
+      `https://api.themoviedb.org/3/movie/${id}?api_key={ADD API KEY}&language=en-US`
     );
 
     setContent(data);
