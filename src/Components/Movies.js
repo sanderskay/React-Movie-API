@@ -7,7 +7,7 @@ function Movies() {
 
   const fetchPopular = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/movie/popular?api_key=a33dac8f4fdc5b588a242bf40de1b265&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/popular?api_key={ADD API KEY}&language=en-US&page=1`
     );
 
     setContent(data.results);
