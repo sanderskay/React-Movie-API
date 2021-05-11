@@ -11,3 +11,7 @@ Project requires installation of:
 - @material-ui/icons
 - @material-ui/core
 
+Project requires API Key in:
+
+- Components/Popup.js
+- Components/Movies.js
