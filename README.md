@@ -13,5 +13,5 @@ Project requires installation of:
 
 Project requires API Key in:
 
-- Components/Popup.js
-- Components/Movies.js
+- Components/Popup.js/const fetchData
+- Components/Movies.js/const fetchPopular
