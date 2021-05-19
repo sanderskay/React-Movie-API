@@ -6,8 +6,12 @@ Project that has a main page of popular movies which can be scrolled through. Po
 
 Project requires installation of:
 
-- react and node 
+- React and Node 
 - axios
 - @material-ui/icons
 - @material-ui/core
 
+Project requires API Key in:
+
+- Components/Popup.js/const fetchData
+- Components/Movies.js/const fetchPopular
