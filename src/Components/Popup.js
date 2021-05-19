@@ -3,17 +3,13 @@ import Modal from "@material-ui/core/Modal";
 import Fade from "@material-ui/core/Fade";
 import axios from "axios";
 import "./Popup.css";
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
-
-
-
- function Popup({ children, id }) {
-  
+function Popup({ children, id }) {
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState();
 
-  const IMG_API = "https://image.tmdb.org/t/p/w185"
+  const IMG_API = "https://image.tmdb.org/t/p/w185";
 
   const handleOpen = () => {
     setOpen(true);
@@ -37,28 +33,22 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
   return (
     <>
-      <div
-        
-        onClick={handleOpen}
-      >
-        {children}
-      </div>
+      <div onClick={handleOpen}>{children}</div>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
-        className= "modal"
+        className="modal"
         open={open}
         onClose={handleClose}
         closeAfterTransition
-        
       >
         <Fade in={open}>
           {content && (
-              
             <div className="paper">
-              <h1 className="fade-header" onClick={handleClose}>{<ArrowBackIcon className="arrow"/>}Movie Details</h1>
+              <h1 className="fade-header" onClick={handleClose}>
+                {<ArrowBackIcon className="arrow" />}Movie Details
+              </h1>
               <div className="fade-container">
-                
                 <img
                   src={`${IMG_API}${content.poster_path}`}
                   alt={content.title}
@@ -67,21 +57,16 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
                 <div className="about">
                   <span className="title">
                     {content.title} (
-                    {(
-                      
-                      content.release_date ||
-                      "-----"
-                    ).substring(0, 4)}
-                    )
+                    {(content.release_date || "-----").substring(0, 4)})
                   </span>
-                  <span className='rating'>Rating: {content.vote_average}/10</span>
+                  <span className="rating">
+                    Rating: {content.vote_average}/10
+                  </span>
                   {content.tagline && (
                     <i className="tagline">{content.tagline}</i>
                   )}
-                  <hr className="divider"/>
-                  <span className="description">
-                    {content.overview}
-                  </span>
+                  <hr className="divider" />
+                  <span className="description">{content.overview}</span>
                 </div>
               </div>
             </div>

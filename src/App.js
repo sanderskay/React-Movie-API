@@ -1,11 +1,11 @@
 import "./App.css";
 import Movies from "./Components/Movies";
-import Header from "./Components/Header"
+import Header from "./Components/Header";
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <Movies />
     </div>
   );

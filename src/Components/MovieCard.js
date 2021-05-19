@@ -1,5 +1,6 @@
 import React from "react";
 import Popup from "./Popup";
+import "./MovieCard.css";
 
 function MovieCard({ id, poster, title }) {
   const IMG_API = "https://image.tmdb.org/t/p/w185";

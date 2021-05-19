@@ -1,0 +1,27 @@
+.header {
+  text-align: left;
+  font-size: 25px;
+  background-color: #203666;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 15px;
+  width: 60%;
+  cursor: pointer;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+  background-color: #203666;
+}
+
+.header-button {
+  background-color: #203666;
+  border: none;
+}
