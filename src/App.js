@@ -1,12 +1,21 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import "./App.css";
 import Movies from "./Components/Movies";
-import Header from "./Components/Header";
+import MovieDetails from "./Components/MovieDetails";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Movies />
+      <Router>
+        <Switch>
+          <Route exact path='/'>
+            <Movies  />
+          </Route>
+          <Route path='/movies/:id'>
+            <MovieDetails />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

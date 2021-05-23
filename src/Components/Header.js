@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.css";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-import { LaptopWindows } from "@material-ui/icons";
 
 function Header() {
   return (
